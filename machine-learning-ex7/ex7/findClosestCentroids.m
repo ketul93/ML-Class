@@ -21,10 +21,19 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+dist = 0;
 
-
-
-
+for i=1:size(X)(1)
+  
+  idx(i,1) = 1;
+  dist = norm(X(i,:) - centroids (1,:));
+  for j = 2:size(centroids)(1)
+    if  norm(X(i,:) -  centroids (j,:)) < dist ;
+      idx(i,1) = j;
+      dist = norm(X(i,:) - centroids (j,:));
+    end
+  end
+end
 
 
 % =============================================================
